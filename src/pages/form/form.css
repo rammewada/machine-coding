@@ -1,0 +1,24 @@
+.form {
+  border: "2px solid #fff";
+  padding: 10px;
+  margin: 10px;
+  display: flex;
+  flex-direction: column;
+  row-gap: 5px;
+  max-width: 200px;
+}
+button {
+  border-radius: 10px;
+  border: none;
+  padding: 4px;
+}
+
+input,
+textarea {
+  border-radius: 5px;
+  padding: 4px;
+}
+
+.error-message {
+  color: red;
+}
