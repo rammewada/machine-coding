@@ -10,12 +10,16 @@ import Search from "./pages/seach/page";
 import Context from "./pages/context";
 import { AuthProvider } from "./context/userContext";
 import Counter from "./pages/counter";
+import { TestProvider } from "./context/testContext";
+import Test from "./pages/test/page";
 function App() {
   return (
     <>
     <ReduxProvider store={store}>
 
       <AuthProvider>
+        <TestProvider>
+
         <BrowserRouter>
           <Routes>
             <Route index element={<Home />} />
@@ -24,8 +28,10 @@ function App() {
             <Route path="search" element={<Search />} />
             <Route path="context" element={<Context />} />
             <Route path="counter" element={<Counter/>} /> 
+            <Route path="test" element={<Test/>} /> 
           </Routes>
         </BrowserRouter>
+        </TestProvider>
       </AuthProvider>
     </ReduxProvider>
     </>
